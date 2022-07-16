@@ -33,18 +33,20 @@ const PlanetDetails = () => {
   return (
     <>
       <div>
-        <Link to="/">&#8592; Back</Link>
+        <Link to="/" className="planet-back">
+          &#8592; Back
+        </Link>
       </div>
       {fetching ? (
         <p>Fetching .....</p>
       ) : (
-        <div>
+        <div className="planet-content">
           {details &&
             details.collection.items[0].data.map((orbit, index) => {
               return (
                 <div key={index}>
-                  <h2>{orbit?.title}</h2>
-                  <p>{orbit?.description}</p>
+                  <h2 className="planet-heading">{orbit?.title}</h2>
+                  <p className="planet-description">{orbit?.description}</p>
                 </div>
               );
             })}

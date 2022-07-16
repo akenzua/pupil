@@ -1,13 +1,69 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+main,
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ul {
+  padding-right: 50px;
+  border-bottom: 1px solid #cdcdcd;
+}
+li {
+  list-style: none;
+  margin-bottom: 12px;
+  padding: 10px;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+.planet-heading {
+  margin-top: 7px;
+}
+.planet-description {
+  font-size: 10px;
+}
+.planet-back {
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+  line-height: 2.5;
+}
+.active-planet {
+  background-color: black;
+}
+.active-planet a {
+  color: #cdcdcd;
+}
+
+@media only screen and (min-width: 768px) {
+  main,
+  section {
+    flex-direction: row;
+  }
+
+  ul {
+    margin-right: 50px;
+    border-bottom: none;
+    border-right: 1px solid #cdcdcd;
+  }
+  .planet-content {
+    margin-left: 50px;
+    width: 400px;
+  }
 }
