@@ -7,6 +7,7 @@ const PlanetDetails = () => {
   const [fetching, setFetching] = useState(true);
 
   useEffect(() => {
+    // check localStorage and fetch cached data
     const cache =
       localStorage.getItem("planet") === null
         ? {}
@@ -16,6 +17,7 @@ const PlanetDetails = () => {
       setDetails(data);
       setFetching(false);
     } else {
+      // call api if data not already stored in localStorage
       const fetchPlanet = async () => {
         const response = await fetch(
           `https://images-api.nasa.gov/search?q=${planet}&media_type=image`
